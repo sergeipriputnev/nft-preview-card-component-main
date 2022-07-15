@@ -1,0 +1,152 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-BG: hsl(217, 54%, 11%);
+  --card-BG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--main-BG);
+  padding: 0 20px;
+}
+
+main {
+}
+
+.pic-container {
+  position: relative;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.card {
+  position: relative;
+  top: 50vh;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  background-color: var(--card-BG);
+  margin: auto;
+  padding: 23px;
+  border-radius: 10px;
+}
+
+.top-pic {
+  width: 300px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  opacity: 1;
+}
+
+.overlay {
+  background-size: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+  background-color: var(--cyan);
+  background-image: url(/images/icon-view.svg);
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.overlay-canvas {
+  background-size: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+  background-color: var(--cyan);
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.pic-container:hover .overlay-canvas {
+  opacity: 0.7;
+}
+.pic-container:hover .overlay {
+  opacity: 1;
+}
+.pic-container:hover .top-pic {
+  opacity: 0.5;
+}
+
+.description {
+  color: var(--soft-blue);
+  font-weight: 40;
+}
+
+.price-and-days {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: var(--cyan);
+  display: flex;
+  align-items: center;
+}
+
+.days {
+  color: var(--soft-blue);
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  background-color: var(--line);
+  height: 1px;
+}
+
+.creator-info {
+  display: flex;
+  color: var(--white);
+  font-weight: 300;
+  align-items: center;
+}
+
+span {
+  color: var(--soft-blue);
+}
+
+.creator-pic {
+  border-radius: 50%;
+  border: solid var(--white) 2px;
+  margin-right: 15px;
+}
+
+.margin-bottom {
+  margin-bottom: 20px;
+}
+
+svg {
+  margin-right: 7px;
+}
+
+h1:hover,
+span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
